@@ -1,8 +1,8 @@
 import os
+import textwrap
 import questionary
 import praw
 import click
-import textwrap
 from colorama import Fore
 from dotenv import load_dotenv
 load_dotenv()
@@ -12,8 +12,8 @@ REDDIT_USERNAME = os.getenv('REDDIT_USERNAME')
 REDDIT_PASSWORD = ""
 
 def init(subreddit_name: str, pwd: str) -> list:
-    """ 
-    create a reddit instance, 
+    """
+    create a reddit instance,
     return a list contains 10 hot submissions from 'subreddit_name'
     """
     reddit = praw.Reddit(
@@ -27,11 +27,12 @@ def init(subreddit_name: str, pwd: str) -> list:
     hot_threads = reddit.subreddit(subreddit_name).hot(limit = 10)
     for submission in hot_threads:
         thread_list.append(submission)
-        
+    
     return thread_list
+
 def create_barrier() -> str:
     """
-    create a yellow barrier 
+    create a yellow barrier
     """
     return Fore.YELLOW + '-' * 110 + Fore.WHITE
 def show_score(comment, level: int) -> str:
@@ -39,22 +40,22 @@ def show_score(comment, level: int) -> str:
     display a score, upvotes, and downvotes symbol of a comment
     """
     wrapper = textwrap.TextWrapper(
-        initial_indent = "\t" * level + " " * 55, 
-        width = 100, 
+        initial_indent = "\t" * level + " " * 55,
+        width = 100,
         subsequent_indent = "\t" * level + " " * 55,
     )
     upvotes = Fore.RED + 'ʌ ' + Fore.WHITE
     downvotes = Fore.BLUE + ' v' + Fore.WHITE
     message = upvotes + str(comment.score) + downvotes
     print(wrapper.fill(message))
-     
+
 def show_comment(comment, level: int):
     """
-    display a comment according to its position on the comment forest 
+    display a comment according to its position on the comment forest
     """
     wrapper = textwrap.TextWrapper(
-        initial_indent = "\t" * level + Fore.RED + ">>> " + Fore.WHITE, 
-        width = 100, 
+        initial_indent = "\t" * level + Fore.RED + ">>> " + Fore.WHITE,
+        width = 100,
         subsequent_indent = "\t" * level
     )
     message = comment.body
@@ -73,11 +74,11 @@ def dfs(comment, level: int):
         dfs(reply, level + 1)
 
 def show_submission(submission):
-    """ 
-    display a full reddit submission 
+    """
+    display a full reddit submission
     """
     print(
-        Fore.MAGENTA + f'{submission.title}\n' 
+        Fore.MAGENTA + f'{submission.title}\n'
         + Fore.WHITE + f'{submission.selftext}\n'
         + create_barrier()
     )

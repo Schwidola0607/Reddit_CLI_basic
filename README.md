@@ -1,4 +1,4 @@
-# Reddit CLI 
+# Reddit CLI (v1.0)
 ## Introduction
 ### Why Reddit CLI?
 > Coworker who sees me looking at something in a browser: "Glad you're not busy; I need you to do this, this, this..."
@@ -6,8 +6,8 @@ Coworker who sees me staring intently at a command prompt: Backs away, slowly...
 
 A nice little CLI whose UI I designed from scratch.
 
-Built on top of [&lt;PRAW&gt;](https://praw.readthedocs.io/en/latest/) 
-and [&lt;Click&gt;](https://click.palletsprojects.com/en/8.0.x/)
+Built on top of [PRAW](https://praw.readthedocs.io/en/latest/) 
+and [Click](https://click.palletsprojects.com/en/8.0.x/)
 
 
 ## Setup
@@ -36,3 +36,19 @@ CLIENT_ID=<your client id>
 CLIENT_SECRET=<your client secret>
 REDDIT_USERNAME=<your reddit username>
 ```
+
+## Usage
+Guide:
+Type your password like below and it is all set
+![Alt Text](https://media.giphy.com/media/MR42EZUzlmuSUhs4Oj/giphy.gif)
+
+For more information please use my help menu
+```
+--help
+```
+
+## Contribution
+Pull requests are accepted! Please open an issue if you find any bugs, or have any idea for a feature. Feedbacks are welcomed, especially about UI-design!
+
+## Licensed
+Apache License 2.0
