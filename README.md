@@ -2,11 +2,11 @@
 ## Introduction
 ### Why Reddit CLI?
 
-> Coworker who sees me looking at something in a browser: 
-> "Glad you're not busy; I need you to do this, this, this..." 
-> Coworker who sees me staring intently at a command prompt: Backs away, slowly...
-A nice little CLI whose UI I designed from scratch.
-
+<blockquote>
+<p>Coworker who sees me looking at something in a browser:
+&quot;Glad you're not busy; I need you to do this, this, this...&quot;
+Coworker who sees me staring intently at a command prompt: Backs away, slowly...</p>
+</blockquote>
 Built on top of [PRAW](https://praw.readthedocs.io/en/latest/) 
 and [Click](https://click.palletsprojects.com/en/8.0.x/)
 
