@@ -1,10 +1,10 @@
 # Reddit CLI (v1.0)
 ## Introduction
 ### Why Reddit CLI?
-> Coworker who sees me looking at something in a browser: "Glad you're not busy; I need you to do this, 
-> this, this..."
-> Coworker who sees me staring intently at a command prompt: Backs away, slowly...
 
+> Coworker who sees me looking at something in a browser: 
+> "Glad you're not busy; I need you to do this, this, this..." 
+> Coworker who sees me staring intently at a command prompt: Backs away, slowly...
 A nice little CLI whose UI I designed from scratch.
 
 Built on top of [PRAW](https://praw.readthedocs.io/en/latest/) 
