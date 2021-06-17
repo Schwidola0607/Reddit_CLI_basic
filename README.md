@@ -40,7 +40,7 @@ REDDIT_USERNAME=<your reddit username>
 ## Usage
 Guide:
 Type your password like below and it is all set
-<img src="https://media.giphy.com/media/MR42EZUzlmuSUhs4Oj/giphy.gif" height = "800" width="1600">
+<img src="https://media.giphy.com/media/MR42EZUzlmuSUhs4Oj/giphy.gif" height = "500" width="800">
 
 
 For more information please use my help menu
